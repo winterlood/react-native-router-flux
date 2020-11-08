@@ -16,36 +16,37 @@ class Launch extends React.Component {
   render() {
     return (
       <View {...this.props} style={styles.container}>
-        <Text>Welcome</Text>
+        <Text>온리엘 테스트입니다.</Text>
+        <Text>react-native-router-flux</Text>
         <Button
-          title="Go to Login"
+          title="관리자 모드로 가기"
           onPress={() =>
             Actions.login({data: 'Custom data', title: 'Custom title'})
           }
         />
-        <Button title="Go to Register page" onPress={Actions.register} />
-        <Button title="Display Error Modal" onPress={Actions.error} />
+        <Button title="트레이너 모드로 가기" onPress={Actions.register} />
+        <Button title="에러메세지" onPress={Actions.error} />
         <Button
-          title="Display Lightbox"
+          title="모달예제"
           onPress={() => Actions.demo_lightbox({data: 'passed data'})}
         />
         <Button
-          title="Go to CustomNavBar page"
+          title="회원 모드로 가기"
           onPress={() => Actions.customNavBar()}
         />
         <Button
-          title="MessageBar alert"
+          title="경고창"
           onPress={() =>
             MessageBarManager.showAlert({
-              title: 'Your alert title goes here',
-              message: 'Your alert message goes here',
+              title: '경고창 제목',
+              message: '이새끼 뭐야?',
               alertType: 'success',
               // See Properties section for full customization
               // Or check `index.ios.js` or `index.android.js` for a complete example
             })
           }
         />
-        <Button title="Go to TabBar page" onPress={Actions.drawer} />
+        <Button title="탭바" onPress={Actions.drawer} />
       </View>
     );
   }
